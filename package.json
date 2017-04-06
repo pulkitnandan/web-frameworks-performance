@@ -4,11 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "rnm": "rm -rf */*/node_modules ",
+    "start-react": "(cd reactjs/expressApi9MB && npm run start) & (cd reactjs/expressHtml9MB && npm run start) & ",
+    "start-vue": "(cd vuejs/expressApi9MB && npm run start) & (cd vuejs/expressHtml9MB && npm run start) & (cd vuejs/koaHtml9MB && npm run start) &",
+    "start-servers": "npm run start-vue && npm run start-react",
+    "build-react": "(cd reactjs/expressApi9MB && npm run build) && (cd reactjs/expressHtml9MB && npm run build)",
+    "build-vue": "(cd vuejs/expressApi9MB && npm run build) && (cd vuejs/expressHtml9MB && npm run build) && (cd vuejs/koaHtml9MB && npm run build)",
+    "build-servers": "npm run build-vue && npm run build-react",
     "yarn-install-angular": "(cd angular/ng-universal-demo && yarn install)",
     "yarn-install-react": "(cd reactjs/expressApi9MB && yarn install) && (cd reactjs/expressHtml9MB && yarn install)",
     "yarn-install-vue": "(cd vuejs/expressApi9MB && yarn install) && (cd vuejs/expressHtml9MB && yarn install) && (cd vuejs/koaHtml9MB && yarn install)",
     "yarn-install-recursive": "npm run yarn-install-angular && npm run yarn-install-react && npm run yarn-install-vue",
-    "start": "npm run yarn-install-recursive"
+    "start": "npm run yarn-install-recursive && npm run build-servers && npm run start-servers"
   },
   "repository": {
     "type": "git",
