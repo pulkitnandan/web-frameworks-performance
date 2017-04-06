@@ -1,0 +1,26 @@
+{
+  "name": "perf-framework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "yarn-install-angular": "(cd angular/ng-universal-demo && yarn install)",
+    "yarn-install-react": "(cd reactjs/expressApi9MB && yarn install) && (cd reactjs/expressHtml9MB && yarn install)",
+    "yarn-install-vue": "(cd vuejs/expressApi9MB && yarn install) && (cd vuejs/expressHtml9MB && yarn install) && (cd vuejs/koaHtml9MB && yarn install)",
+    "yarn-install-recursive": "npm run yarn-install-angular && npm run yarn-install-react && npm run yarn-install-vue",
+    "start": "npm run yarn-install-recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pulkitnandan/web-frameworks-performance.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pulkitnandan/web-frameworks-performance/issues"
+  },
+  "homepage": "https://github.com/pulkitnandan/web-frameworks-performance#readme",
+  "devDependencies": {
+    "yarn": "^0.21.3"
+  }
+}

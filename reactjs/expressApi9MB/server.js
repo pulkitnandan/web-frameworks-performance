@@ -26,7 +26,7 @@ app.prepare().then(() => {
 
     server.get('/a', function(req, res) {
         const fs = require('fs')
-        fs.readFile('/home/rohitn/index', 'utf8', function(err, data) {
+        fs.readFile('index', 'utf8', function(err, data) {
             if (err) {
                 return console.log(err);
             }
